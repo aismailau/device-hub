@@ -1,0 +1,9 @@
+#root {
+    width: 100%;
+}
+
+.rootContainer {
+    /* background: linear-gradient(120deg, var(--crimson-5), var(--blue-5)); */
+    background: linear-gradient(120deg, var(--blue-5), var(--lime-3));
+    height: 100vh;
+}
