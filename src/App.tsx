@@ -13,20 +13,14 @@ function App() {
     return (
         <Theme accentColor="mint" grayColor="sand" radius="large" scaling="95%">
             <div className="rootContainer">
-                <Box
-                    width={{ md: "100vw", xl: "1400px" }}
-                    height={{ md: "100vh", xl: "600px" }}
-                    p={{ sm: "6", lg: "9" }}
-                    >
-                        <Container size="1">
-                            <Box py="9">
-                                <TableComponent />
-                            </Box>
-                            <Box py="9">
-                                <Signup />
-                            </Box>
-                        </Container>
-                </Box>
+                <Container size="1">
+                    <Box pt="5">
+                        <TableComponent />
+                    </Box>
+                    <Box pt="5">
+                        <Signup />
+                    </Box>
+                </Container>
             </div>
             <ThemePanel />
         </Theme>

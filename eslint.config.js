@@ -15,6 +15,8 @@ export default defineConfig([
             tseslint.configs.recommended,
             reactHooks.configs["recommended-latest"],
             reactRefresh.configs.vite,
+            tseslint.configs.stylisticTypeChecked,
+            tseslint.configs.recommendedTypeChecked,
         ],
         languageOptions: {
             ecmaVersion: 2020,
