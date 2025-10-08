@@ -5,5 +5,20 @@
 .rootContainer {
     /* background: linear-gradient(120deg, var(--crimson-5), var(--blue-5)); */
     background: linear-gradient(120deg, var(--blue-5), var(--lime-3));
-    height: 100vh;
+    background-attachment: fixed;
+    background-size: 100% 100vh;
+    background-repeat: repeat-y;
+    min-height: 100vh;
+    /* padding-bottom: 4rem; */
+}
+
+.appHeader {
+    padding: 2rem 0;
+}
+
+.appContent {
+    background: var(--color-panel);
+    border-radius: var(--radius-4);
+    box-shadow: var(--shadow-4);
+    padding: 2rem;
 }

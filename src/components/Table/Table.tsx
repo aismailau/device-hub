@@ -1,6 +1,4 @@
 import { Card, Table } from "@radix-ui/themes";
-import React from "react";
-
 
 export const TableComponent = () => {
     return (
