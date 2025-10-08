@@ -41,7 +41,7 @@ export const Header = () => {
                     {user ? (
                         <DropdownMenu.Root>
                             <DropdownMenu.Trigger>
-                                <Button variant="soft">{user.email}</Button>
+                                <Button variant="soft">{user.username}</Button>
                             </DropdownMenu.Trigger>
                             <DropdownMenu.Content>
                                 <DropdownMenu.Label>Account</DropdownMenu.Label>

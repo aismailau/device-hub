@@ -5,7 +5,7 @@ let inMemoryToken: string | null = null;
 let inMemoryUser: SessionUser | null = null;
 
 export interface SessionUser {
-    email: string;
+    username: string;
 }
 
 const getStorage = (): Storage | undefined => {
@@ -68,7 +68,7 @@ export const getSessionUser = (): SessionUser | null => {
     try {
         const parsed = JSON.parse(raw) as SessionUser;
 
-        if (parsed?.email) {
+        if (parsed?.username) {
             inMemoryUser = parsed;
             return parsed;
         }

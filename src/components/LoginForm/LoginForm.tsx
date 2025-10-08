@@ -10,7 +10,7 @@ interface LoginFormProps {
 }
 
 export const LoginForm = ({ onSuccess }: LoginFormProps) => {
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -23,10 +23,10 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
             return;
         }
 
-        const normalizedEmail = email.trim();
+        const normalizedUsername = username.trim();
 
-        if (!normalizedEmail || !password) {
-            setError("Email and password are required.");
+        if (!normalizedUsername || !password) {
+            setError("Username and password are required.");
             return;
         }
 
@@ -35,7 +35,7 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
         setIsSuccess(false);
 
         try {
-            await authService.login({ email: normalizedEmail, password });
+            await authService.login({ username: normalizedUsername, password });
             setIsSuccess(true);
             onSuccess?.();
         } catch (err) {
@@ -79,21 +79,21 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
                     <Flex mb="1">
                         <Text
                             as="label"
-                            htmlFor="login-email-field"
+                            htmlFor="login-username-field"
                             size="2"
                             weight="bold"
                         >
-                            Email address
+                            Username
                         </Text>
                     </Flex>
                     <TextField.Root
                         tabIndex={1}
-                        placeholder="Enter your email"
-                        id="login-email-field"
-                        type="email"
-                        autoComplete="email"
-                        value={email}
-                        onChange={(event) => setEmail(event.target.value)}
+                        placeholder="Enter your username"
+                        id="login-username-field"
+                        type="text"
+                        autoComplete="username"
+                        value={username}
+                        onChange={(event) => setUsername(event.target.value)}
                         disabled={isSubmitting}
                         required
                     />

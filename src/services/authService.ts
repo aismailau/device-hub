@@ -12,7 +12,7 @@ import {
 } from "./sessionToken";
 
 export interface LoginCredentials {
-    email: string;
+    username: string;
     password: string;
 }
 
@@ -53,7 +53,7 @@ class AuthService<TUser = unknown> {
         }
 
         setSessionToken(sessionToken);
-        const user: AuthUser = { email: credentials.email };
+        const user: AuthUser = { username: credentials.username };
         setSessionUser(user);
         this.currentUser = user;
         this.notify();
